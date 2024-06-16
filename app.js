@@ -2,9 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const menuRoutes = require('./routes/menuRoutes');
 const path = require('path');
+const cors = require('cors');
 require('dotenv').config();
 
+
 const app = express();
+
+// Enable all CORS requests
+app.use(cors());
 
 // Middleware
 app.use(bodyParser.json());
